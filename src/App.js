@@ -5,7 +5,7 @@ import butcherPigImage from "./assets/butcherPig.jpeg"
 const App = () => {
   // ACTION ITEM: to make the development process easier there are some preassigned words in the input field, when you are ready for your full user experience delete the test words passed to useState and pass an empty string
   const [userInput, setUserInput] = useState(
-    "apple through queen squeal fry fluent"
+    ""
   )
   const [inputTranslated, setInputTranslated] = useState("")
 
@@ -42,7 +42,7 @@ const App = () => {
      } else if (eachWord[0] === "q" && eachWord[1] === "u") {
       // .substr is crossed out, used .substring (gives you the index to take out, second value shows the amount of letter to show)
       return eachWord.substring(2) + "quay"
-     } else if (eachWord.includes("y") && eachWord[0] !== ("y") && eachWord.includes(vowelsArray)== "false") {
+     } else if (eachWord.includes("y") && eachWord[0] !== ("y") && eachWord.includes(vowelsArray) == "false") {
       return eachWord.substring(eachWord.indexOf("y")) + eachWord.substring(0, eachWord.indexOf("y")) + "ay"
     //  "style" : yle + st + ay = ylestay
     // need an else if wihtout the vowels, create new substring and take out consonants from the begining and push it to the back with + 'ay' at the end
@@ -53,7 +53,7 @@ const App = () => {
       // return eachWord.substring(eachWord.indexOf(vowelsArray) + eachWord.substring(0, eachWord.includes(vowelsArray))) + "ay"
      }
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
-      return eachWord
+     
     })
 
     // NO MODIFICATION NEEDED: once the code has been modified it gets joined from an array back to a string
@@ -66,7 +66,7 @@ const App = () => {
 
   // ACTION ITEM: this method restarts the game by setting the original state, when you are ready for your full user experience delete the test words in setUserInput and pass an empty string
   const restartGame = () => {
-    setUserInput("apple through queen squeal fry fluent")
+    setUserInput("")
     setInputTranslated("")
   }
 
