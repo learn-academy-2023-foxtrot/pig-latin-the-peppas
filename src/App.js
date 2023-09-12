@@ -42,9 +42,15 @@ const App = () => {
      } else if (eachWord[0] === "q" && eachWord[1] === "u") {
       // .substr is crossed out, used .substring (gives you the index to take out, second value shows the amount of letter to show)
       return eachWord.substring(2) + "quay"
-     } else if (eachWord.includes("y") && eachWord[0] !== ("y")) {
+     } else if (eachWord.includes("y") && eachWord[0] !== ("y") && eachWord.includes(vowelsArray)== "false") {
       return eachWord.substring(eachWord.indexOf("y")) + eachWord.substring(0, eachWord.indexOf("y")) + "ay"
     //  "style" : yle + st + ay = ylestay
+    // need an else if wihtout the vowels, create new substring and take out consonants from the begining and push it to the back with + 'ay' at the end
+     } else {
+      return eachWord.substring(eachWord.indexOf(vowelsArray[0])) + eachWord.substring(0, eachWord.indexOf(vowelsArray[0])) + "ay"
+
+
+      // return eachWord.substring(eachWord.indexOf(vowelsArray) + eachWord.substring(0, eachWord.includes(vowelsArray))) + "ay"
      }
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
