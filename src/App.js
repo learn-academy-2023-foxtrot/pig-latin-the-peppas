@@ -39,6 +39,9 @@ const App = () => {
       // process: if the first letter of eachWord equals the first value within vowelsArray, add "way" to the end of string eachWord
      if (eachWord[0] === vowelsArray[0]) {
       return eachWord + "way"
+     } else if (eachWord[0] === "q" && eachWord[1] === "u") {
+      // .substr is crossed out, used .substring (gives you the index to take out, second value shows the amount of letter to show)
+      return eachWord.substring(2) + "quay"
      }
     
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
