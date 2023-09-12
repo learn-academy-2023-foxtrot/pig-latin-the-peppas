@@ -42,8 +42,10 @@ const App = () => {
      } else if (eachWord[0] === "q" && eachWord[1] === "u") {
       // .substr is crossed out, used .substring (gives you the index to take out, second value shows the amount of letter to show)
       return eachWord.substring(2) + "quay"
+     } else if (eachWord.includes("y") && eachWord[0] !== ("y")) {
+      return eachWord.substring(eachWord.indexOf("y")) + eachWord.substring(0, eachWord.indexOf("y")) + "ay"
+    //  "style" : yle + st + ay = ylestay
      }
-    
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
     })
